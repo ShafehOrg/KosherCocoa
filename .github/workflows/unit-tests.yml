@@ -8,8 +8,10 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+    - name: Build and Test
+      uses: sersoft-gmbh/xcodebuild-action@v2
+      with:
+        project: KosherCocoa.xcodeproj
+        scheme: KosherCocoa
+        destination: platform=macOS
+        action: test
