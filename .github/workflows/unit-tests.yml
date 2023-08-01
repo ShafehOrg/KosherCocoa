@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - name: Set New York timezone
+    - name: Set LA timezone
       run: |
-        sudo systemsetup -settimezone America/New_York
+        sudo systemsetup -settimezone America/Los_Angeles
 
     - uses: actions/checkout@v3
 
