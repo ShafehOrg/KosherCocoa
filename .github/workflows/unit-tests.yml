@@ -11,6 +11,6 @@ jobs:
     - name: Build and Test
       uses: sersoft-gmbh/xcodebuild-action@v2
       with:
-        project: KosherCocoa.xcodeproj
+        project: ./KosherCocoa.xcodeproj
         destination: platform=macOS
         action: test
