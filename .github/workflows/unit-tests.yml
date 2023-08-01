@@ -1,15 +1,17 @@
-name: Swift
+name: unit tests
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: macos-13
-    env:
-      TZ: 'America/New_York'
     steps:
+    - name: Set New York timezone
+      run: |
+        sudo systemsetup -settimezone America/New_York
+
     - uses: actions/checkout@v3
+
     - name: Build and Test
       uses: sersoft-gmbh/xcodebuild-action@v2
       with:
@@ -17,3 +19,7 @@ jobs:
         destination: platform=macOS
         scheme: KosherCocoaTests
         action: test
+
+    - name: Reset timezone to default (UTC)
+      run: |
+        sudo systemsetup -settimezone UTC
