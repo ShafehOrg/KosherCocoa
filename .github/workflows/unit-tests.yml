@@ -15,5 +15,5 @@ jobs:
       with:
         project: ./KosherCocoa.xcodeproj
         destination: platform=macOS
-        scheme: KosherCocoa
+        scheme: KosherCocoaTests
         action: test
