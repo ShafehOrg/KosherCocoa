@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Set LA timezone
       run: |
-        sudo systemsetup -settimezone America/Los_Angeles
+        sudo systemsetup -settimezone UTC
 
     - uses: actions/checkout@v3
 
