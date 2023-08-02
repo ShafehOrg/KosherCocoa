@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - name: Set Etc/UTC timezone
+    - name: Set GMT timezone
       run: |
-        sudo systemsetup -settimezone Etc/UTC
+        sudo systemsetup -settimezone GMT
 
     - uses: actions/checkout@v3
 
