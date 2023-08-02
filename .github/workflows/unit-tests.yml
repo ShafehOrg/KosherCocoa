@@ -6,9 +6,9 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - name: Set LA timezone
+    - name: Set Etc/UTC timezone
       run: |
-        sudo systemsetup -settimezone UTC
+        sudo systemsetup -settimezone Etc/UTC
 
     - uses: actions/checkout@v3
 
@@ -22,4 +22,4 @@ jobs:
 
     - name: Reset timezone to default (UTC)
       run: |
-        sudo systemsetup -settimezone UTC
+        sudo systemsetup -settimezone Etc/UTC
